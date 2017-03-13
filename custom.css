@@ -1,0 +1,87 @@
+body {
+  padding: 20px 20px 0 20px;
+}
+
+#messages {
+  width: 640px;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 28px;
+}
+
+#messages .message {
+  display: inline-block;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  padding: 15px 20px 15px 20px;
+  display: none;
+}
+
+#messages .message.me {
+  background: #4bbbfb;
+  float: right;
+  margin-left: 100px;
+  color: white;
+}
+
+#messages .message.me.image {
+  padding: 0 !important;
+}
+
+  #messages .message.me.image img {
+    display: block;
+    max-width: 100%;
+    border-radius: 40px;
+  }
+
+  #messages .message.me.typing-indicator {
+    background-color: #E6E7ED;
+    will-change: transform;
+    width: auto;
+    animation: 2s bulge infinite ease-out;
+    display: block;
+  }
+
+  #messages .message.me.typing-indicator span {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin: 0 1px;
+    background-color: #9E9EA1;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+  #messages .message.me.typing-indicator span:nth-of-type(1) {
+    animation: 1s blink infinite 0.3333s;
+  }
+  #messages .message.me.typing-indicator span:nth-of-type(2) {
+    animation: 1s blink infinite 0.6666s;
+  }
+  #messages .message.me.typing-indicator span:nth-of-type(3) {
+    animation: 1s blink infinite 0.9999s;
+  }
+
+
+  @keyframes blink {
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes bulge {
+    50% {
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05);
+    }
+  }
+
+@media only screen and (max-width: 480px) {
+
+  #messages {
+    font-size: 22px;
+  }
+
+}
