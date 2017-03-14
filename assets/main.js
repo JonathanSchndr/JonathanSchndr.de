@@ -2,7 +2,7 @@
 
   $(document).ready(function() {
 
-    var audio = new Audio("sound.mp3");
+    var audio = new Audio("assets/sound.mp3");
 
     $("#messages .message:nth-of-type(1)").delay(1000).show(0, function() {
       audio.play();
